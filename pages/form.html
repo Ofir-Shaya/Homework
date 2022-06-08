@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ofir Shaya</title>
+    <meta name="author" content="Ofir Shaya" />
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="header">
+        <h1>ofir shaya home work</h1>
+        <nav>
+          <ul>
+            <li><a href="../pages/homework.html">Home</a></li>
+            <li><a href="../pages/About.html">About</a></li>
+            <li><a href="../pages/Contact.html">Contact us</a></li>
+            <li><a href="../pages/form.html">Form</a></li>
+            <li>
+              <a href="../pages/Registration/registerStepOne.html">Register</a>
+            </li>
+          </ul>
+        </nav>
+        <hr />
+      </div>
+      <div class="form">
+        <form action="" method="post">
+          <br />
+          <fieldset>
+            <legend>
+              General Info:
+              <p style="color: red; display: inline;"">*</p>
+            </legend>
+            <input
+              id="username"
+              type="text"
+              name="Username"
+              placeholder="Username"
+              minlength="4"
+              maxlength="12"
+              required
+            />
+            <br />
+            <input
+              id="email"
+              type="email"
+              name="Email"
+              inputmode="email"
+              placeholder="Email"
+              minlength="5"
+              required
+            />
+            <br />
+            <input
+              id="password"
+              type="password"
+              name="Password"
+              placeholder="Password"
+              minlength="6"
+              maxlength="16"
+              required
+            />
+            <br />
+            <input
+              id="confirmPassword"
+              type="password"
+              name="confirmPassword"
+              placeholder="Confirm Password"
+              minlength="6"
+              maxlength="16"
+              required
+            />
+          </fieldset>
+          <br>
+          <fieldset>
+            <legend>Personal Info:</legend>
+            <div>
+              <h4>Gender:</h4>
+              <input
+                id="male"
+                type="radio"
+                name="Gender"
+                checked
+                value="male"
+              />
+              <label for="male">Male</label>
+              <input id="female" type="radio" name="Gender" value="female" />
+              <label for="female">Female</label>
+              <input
+                id="other"
+                type="radio"
+                name="Gender"
+                value="other"
+              /><label for="other">Other</label>
+            </div>
+            <input type="checkbox" id="over18" name="over18" value="false" />
+            I am over 18
+            <div>
+              <h4>Country</h4>
+              <select id="country" name="country">
+                <option value="Iceland">Iceland</option>
+                <option value="Indonesia">Indonesia</option>
+                <option value="India">India</option>
+                <option value="Iran">Iran</option>
+                <option value="Iraq">Iraq</option>
+                <option value="Ireland">Ireland</option>
+                <option value="Isle of Man">Isle of Man</option>
+                <option value="Israel">Israel</option>
+                <option value="Italy">Italy</option>
+                <option value="Jamaica">Jamaica</option>
+                <option value="Japan">Japan</option>
+              </select>
+            </div>
+          </fieldset>
+          <div>
+            <br />
+            <button type="reset">reset</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

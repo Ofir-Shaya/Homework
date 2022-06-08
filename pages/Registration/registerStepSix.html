@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/registerStyle.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+<body>
+    <div class="header">
+        <ul id="headerUl">
+          <li style="margin-right: 0">
+            <img
+              src="../../images/logo.jpg"
+              alt="logo picture"
+              style="width: 150px"
+            />
+          </li>
+          <li><button >השירותים שלנו</button></li>
+          <li><button>כניסה לרשומים</button></li>
+          <li><button>הרשמה</button></li>
+        </ul>
+      </div>
+      <div class="body">
+          <div class="stepInfo">
+            <div class="fillInfo">
+              <h2 class="center">
+                  נא להכניס פרטים של בעל הרכב
+              </h2>
+              <ul>
+                <li><h3>מה התאריך לידה שלך?</h3></li>
+                <li><h3>איפה אתה גר?</h3></li>
+                <li><h3>מה החברה של הרכב?</h3></li>
+                <li><h3>מה הדגם של הרכב?</h3></li>
+            </ul>
+            <ul>
+                <li><input type="date" name="inputBirthDate" id="inputBirthDate" required></li>
+                <li><input type="text" name="inputAddress" id="inputAddress" required placeholder="שם יישוב בעברית"></li>
+                <li><input type="text" name="inputCarCompany" id="inputCarCompany" required placeholder="חברה של הרכב" onchange="handleCarModel()"></li>
+                <li><input type="text" name="inputCarModel" id="inputCarModel" disabled placeholder="דגם הרכב"></li>
+            </ul>
+            <ul>
+                <li><h3>מה המצב המשפחתי שלך?</h3></li>
+                <li><h3>מיהו הנהג העיקרי ברכב?</h3></li>
+                <li><h3>באיזה שנה קיבלת רישיון?</h3></li>
+                <li><h3>מי ינהג ברכב?</h3></li>
+            </ul>
+              <ul>
+                  <li><select name="selectSituation" id="selectSituation" required style="margin-right:2em;">
+                      <option value="married">נשוי (או ידוע בציבור)</option>
+                      <option value="single">רווק</option>
+                      <option value="divorced">גרוש</option>
+                      <option value="widower">אלמן</option>
+                  </select></li>
+                  <li><select name="selectDriver" id="selectDriver" required style="min-width: 160px">
+                      <option value="meDriver">אני</option>
+                      <option value="otherDriverMale">נהג אחר</option>
+                      <option value="otherDriverFemale">נהגת אחרת</option>
+                  </select></li>
+                  <li><input type="text" name="licenseYear" id="licenseYear" placeholder="שנת קבלת רישיון" required style="margin-right: 3em"></li>
+                  <li><select name="whoDrives" id="whoDrives" required>
+                      <option value="iDrive">רק אני</option>
+                      <option value="iAndOtherDriver">אני ונהג אחד נוסף</option>
+                      <option value="anyDrive">כל נהג</option>
+                  </select></li>
+              </ul>
+              <button type="submit" class="btnContinue" onclick="handleClick()" >המשך</button>
+              
+            </div>
+        </div>
+          <ul class="footerUl">
+              <li ><img src="../../images/left-banner.png" alt="banner"/>
+              <button class="backBtn" onclick="backwardPage()"><img src="../../images/right-arrow-svgrepo-com.svg" alt="backArrow" class="backArrow">חזרה</button></li>
+              <li><img src="../../images/right-banner.png" alt="banner"/>
+              
+          </ul>
+      </div>
+      <script>
+          function handleClick() {
+
+              location.replace("./registerStepSeven.html");
+          }
+          function backwardPage() {
+              location.replace("./registerStepFive.html");
+          }
+          function handleCarModel() {
+            let carCompany = document.getElementById("inputCarCompany").value;
+            if(!(carCompany === ""))
+            {
+                document.getElementById("inputCarModel").removeAttribute("disabled")
+            }
+            else
+            {
+                document.getElementById("inputCarModel").setAttribute("disabled","");
+            }
+          }
+</script>
+</body>
+</html>

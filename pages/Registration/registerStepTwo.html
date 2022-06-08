@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/registerStyle.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+<body>
+    <div class="header">
+        <ul id="headerUl">
+          <li style="margin-right: 0">
+            <img
+              src="../../images/logo.jpg"
+              alt="logo picture"
+              style="width: 150px"
+            />
+          </li>
+          <li><button>השירותים שלנו</button></li>
+          <li><button>כניסה לרשומים</button></li>
+          <li><button>הרשמה</button></li>
+        </ul>
+      </div>
+      <div class="body">
+        <h2 class="center">
+            מי הבעלים של הרכב?
+        </h2>
+        <h3 style="width: 400px" class="center">שאלה זו והשאלות הבאות מופנות לבעלים הרשום של הרכב ועל שמו תרשם הפוליסה.</h3>
+      <ul >
+          <li onclick="movePage()" class="liGender">
+              <img src="../../images/female.svg" alt="female" class="stepPictures">
+              <h2>אני בעלת הרכב</h2>
+            </li>
+          <li onclick="movePage()" class="liGender">
+              <img src="../../images/male.svg" alt="male" class="stepPictures"/>
+              <h2>אני בעל הרכב</h2>
+            </li>
+      </ul>
+      <ul class="footerUl">
+        <li ><img src="../../images/left-banner.png" alt="banner"/>
+        <button class="backBtn" onclick="backwardPage()"><img src="../../images/right-arrow-svgrepo-com.svg" alt="backArrow" class="backArrow">חזרה</button></li>
+        <li><img src="../../images/right-banner.png" alt="banner"/>
+        
+    </ul>
+    </div>
+    <script>
+        function movePage() {
+          location.replace("./registerStepThree.html");
+        }
+        function backwardPage() {
+          location.replace("./registerStepOne.html");
+        }
+      </script>
+</body>
+</html>

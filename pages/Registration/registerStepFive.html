@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/registerStyle.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+<body>
+    <div class="header">
+        <ul id="headerUl">
+          <li style="margin-right: 0">
+            <img
+              src="../../images/logo.jpg"
+              alt="logo picture"
+              style="width: 150px"
+            />
+          </li>
+          <li><button >השירותים שלנו</button></li>
+          <li><button>כניסה לרשומים</button></li>
+          <li><button>הרשמה</button></li>
+        </ul>
+      </div>
+      <div class="body">
+          <div class="stepInfo">
+          <h2 class="center" >מה מספר הטלפון הנייד שלך?</h2>
+          <h3 class="center" style="max-width: 350px">נשתמש בו כדי לשלוח אליך את הצעת המחיר, קופונים ועוד דברים שימושיים.
+        </h3>
+        <input id="inputPhone" class="inputs" required type="tel" minlength="10" maxlength="14" placeholder="ספרות בלבד ללא רווחים או קווים" onchange="validPhone()" style="margin-top: 2em;" >
+        <br>
+        <label id="phoneError" class="labelErrors"></label>
+        <button class="btnContinue" id="btnContinue" onclick="handleClick()" disabled>המשך</button>
+    </div>
+        <ul class="footerUl">
+            <li ><img src="../../images/left-banner.png" alt="banner"/>
+            <button class="backBtn" onclick="backwardPage()"><img src="../../images/right-arrow-svgrepo-com.svg" alt="backArrow" class="backArrow">חזרה</button></li>
+            <li><img src="../../images/right-banner.png" alt="banner"/>
+            
+        </ul>
+    </div>
+    <script>
+        function handleClick() {
+            location.replace("./registerStepSix.html");
+        }
+        function backwardPage() {
+            location.replace("./registerStepFour.html");
+        }
+        function validPhone() {
+        let phone = document.getElementById("inputPhone").value;
+        if (phone === "")
+        {
+          document.getElementById("phoneError").innerHTML = "שדה חובה";
+          document.getElementById("btnContinue").setAttribute("disabled","");
+        }
+        else
+        {
+          
+          document.getElementById("btnContinue").removeAttribute("disabled")
+          document.getElementById("phoneError").innerHTML = "";
+        }
+      }
+</script>
+</body>
+</html>

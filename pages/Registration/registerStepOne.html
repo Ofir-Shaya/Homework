@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/registerStyle.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="header">
+      <ul id="headerUl">
+        <li style="margin-right: 0">
+          <img
+            src="../../images/logo.jpg"
+            alt="logo picture"
+            style="width: 150px"
+          />
+        </li>
+        <li><button>השירותים שלנו</button></li>
+        <li><button>כניסה לרשומים</button></li>
+        <li><button>הרשמה</button></li>
+        <li><button onclick="moveHome()">חזרה לדף הבית</button></li>
+      </ul>
+    </div>
+    <div class="body">
+      <img
+        src="../../images/header_carLobby_cut.jpg"
+        alt="home page car picture"
+        style="width: 600px"
+        class="center"
+      />
+      <h1 class="center">ביטוח רכב במהירות</h1>
+      <h2 class="center">העידן החדש בביטוחי רכב: התאמה אישית</h2>
+      <ul class="stepsUl">
+        <li class="steps">
+          <img
+            src="../../images/1icon.png"
+            alt="step one"
+            class="stepPictures"
+          />
+          <h3 style="max-width: 300px; margin-right: 3em">
+            לורם איפסום לורם איפסום לורם איפסום לורם איפסוםלורם איפסום
+          </h3>
+        </li>
+        <li class="steps">
+          <img
+            src="../../images/2icon .png"
+            alt="step two"
+            class="stepPictures"
+          />
+          <h3 style="max-width: 250px; margin-right: 3.5em">
+            לורם איפסום לורם איפסום לורם איפסום לורם איפסום לורם איפסום לורם
+            איפסום
+          </h3>
+        </li>
+        <li class="steps">
+          <img
+            src="../../images/3icon.png"
+            alt="step three"
+            class="stepPictures"
+          />
+          <h3>לורם איפסום לורם איפסום</h3>
+        </li>
+      </ul>
+      <button id="offerButton" onclick="movePage()">
+        לחצו כאן להצעה אונליין
+      </button>
+    </div>
+    <script>
+      function movePage() {
+        location.replace("./registerStepTwo.html");
+      }
+      function moveHome() {
+        location.replace("../homework.html");
+      }
+    </script>
+  </body>
+</html>

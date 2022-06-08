@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/registerStyle.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+<body>
+    <div class="header">
+        <ul id="headerUl">
+          <li style="margin-right: 0">
+            <img
+              src="../../images/logo.jpg"
+              alt="logo picture"
+              style="width: 150px"
+            />
+          </li>
+          <li><button >השירותים שלנו</button></li>
+          <li><button>כניסה לרשומים</button></li>
+          <li><button>הרשמה</button></li>
+        </ul>
+      </div>
+      <div class="body">
+          <div class="stepInfo">
+             <h2 class="center">מה שמך?</h2>
+            <input id="firstName" class="inputs" required placeholder="שם פרטי" minlength="2" maxlength="16" onchange="validFirstName()">
+            <input id="lastName" class="inputs" required placeholder="שם משפחה" minlength="2" maxlength="16" onchange="validLastName()">
+            <br>
+            <label id="firstError" class="labelErrors" ></label>
+            <label id="lastError" class="labelErrors" ></label>
+            
+        </div>
+        <button class="btnContinue" onclick="handleClick()">המשך</button>
+        <ul class="footerUl">
+            <li ><img src="../../images/left-banner.png" alt="banner"/>
+            <button class="backBtn" onclick="backwardPage()"><img src="../../images/right-arrow-svgrepo-com.svg" alt="backArrow" class="backArrow">חזרה</button></li>
+            <li><img src="../../images/right-banner.png" alt="banner"/>
+            
+        </ul>
+    </div>
+    <script>
+      function handleClick() {
+        if(document.getElementById("firstName").value !== "" && document.getElementById("lastName").value !== "")
+        {
+         location.replace("./registerStepFive.html")
+        }
+        else
+        {
+          document.getElementById("firstError").innerHTML = "נא למלא את שני השדות";
+      }}
+      function backwardPage() {
+          location.replace("./registerStepThree.html");
+      }
+      function validFirstName() {
+        let first = document.getElementById("firstName").value;
+        if (first === "")
+        {
+          document.getElementById("firstError").innerHTML = "שדה חובה";
+        }
+        else
+        {
+          document.getElementById("firstError").innerHTML = "";
+        }
+      }
+        function validLastName() {
+        let last = document.getElementById("lastName").value;
+        if (last === "")
+        {
+          document.getElementById("lastError").innerHTML = "שדה חובה";
+        }
+        else
+        {
+          document.getElementById("lastError").innerHTML = "";
+        }
+      }
+    </script>
+</body>
+</html>
