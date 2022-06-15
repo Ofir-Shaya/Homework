@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.grid1 {
+  display: grid;
+  width: 50vw;
+  height: 50vh;
+  justify-content: center;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  margin-left: 15em;
+  align-items: center;
+  justify-items: center;
+}
+.chessPiece {
+  width: 7.6em;
+}
+.grid1 > div:nth-child(16n + 1),
+.grid1 > div:nth-child(16n + 3),
+.grid1 > div:nth-child(16n + 5),
+.grid1 > div:nth-child(16n + 7) {
+  height: 4em;
+  background-color: rgb(181, 131, 99);
+}
+.grid1 > div:nth-child(16n + 10),
+.grid1 > div:nth-child(16n + 12),
+.grid1 > div:nth-child(16n + 14),
+.grid1 > div:nth-child(16n + 16) {
+  height: 4em;
+  background-color: rgb(181, 131, 99);
+}
+.grid1 > div:nth-child(16n + 2),
+.grid1 > div:nth-child(16n + 4),
+.grid1 > div:nth-child(16n + 6),
+.grid1 > div:nth-child(16n + 8) {
+  height: 4em;
+  background-color: rgb(240, 217, 181);
+}
+
+.grid1 > div:nth-child(16n + 9),
+.grid1 > div:nth-child(16n + 11),
+.grid1 > div:nth-child(16n + 13),
+.grid1 > div:nth-child(16n + 15) {
+  height: 4em;
+  background-color: rgb(240, 217, 181);
+}
+.square {
+  position: relative;
+  bottom: -3em;
+}

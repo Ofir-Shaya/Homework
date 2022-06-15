@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+}
+.grid {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.header {
+  background-color: lightcoral;
+  grid-column: 1 / span 6;
+  grid-row: 1;
+}
+.main {
+  background-color: lightseagreen;
+  grid-area: 2 / 1 / span 4 / span 4;
+}
+.features {
+  background-color: lightgreen;
+  grid-area: 2 / 5 / span 3 / span 2;
+}
+.empty {
+  background-color: transparent;
+  grid-area: 5 / 5 / span 2 / span 2;
+}
+.footer {
+  background-color: lightgoldenrodyellow;
+  grid-area: 6 / 1 / span 1 / span 6;
+}
